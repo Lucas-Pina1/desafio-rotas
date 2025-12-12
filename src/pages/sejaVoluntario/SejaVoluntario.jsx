@@ -1,6 +1,33 @@
 import S from "./sejaVoluntario.module.scss";
+import Sucesso from "../../assets/img/check.png";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SejaVoluntario() {
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [sent, setSent] = useState(false);
+
+  function handleChange(e) {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setSent(true);
+
+    setTimeout(() => {
+      navigate("/");
+    }, 3000)
+  }
+
   return (
     <main>
       <section className={S.voluntario}>
@@ -27,61 +54,77 @@ export default function SejaVoluntario() {
       </section>
 
       <section className={S.formulario}>
-        <article className={S.formulario_card}>
-          <h3>Inscrição para Voluntários</h3>
+        {sent && (
+          <section className={S.sucessScream}>
+            <img src={Sucesso} alt="" />
+            <p>
+              Cadastro realizado com sucesso. Entraremos em contato para mais
+              informações.
+            </p>
+          </section>
+        )}
 
-          <form>
-            <div className={S.formulario_secao}>
-              <h4>Dados pessoais</h4>
+        {!sent && (
+          <>
+            <article className={S.formulario_card}>
+              <h3>Inscrição para Voluntários</h3>
 
-              <div className={S.formulario_secao_inputRow}>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Seu Nome *"
-                  value=""
-                  onChange=""
-                  required
-                />
+              <form onSubmit={handleSubmit}>
+                <div className={S.formulario_secao}>
+                  <h4>Dados pessoais</h4>
 
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Seu Email *"
-                  value=""
-                  onChange=""
-                  required
-                />
-              </div>
+                  <div className={S.formulario_secao_inputRow}>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Seu Nome *"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
 
-              <input
-                type="tel"
-                name="phone"
-                className={S.fullWidth}
-                placeholder="Seu Telefone *"
-                value=""
-                onChange=""
-                required
-              />
-            </div>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Seu Email *"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
-            <div className={S.formulario_secao}>
-              <h4>Mensagem Adicional</h4>
-              <textarea
-                name="message"
-                placeholder="Conte-nos porque você quer ser voluntario..."
-                value=""
-                onChange=""
-                rows="5"
-              ></textarea>
-            </div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    className={S.fullWidth}
+                    placeholder="Seu Telefone *"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-            <div className={S.button_container}>
-              <p className={S.button_container_text}>Entraremos em contato para mais informações</p>
-              <button type="submit">Enviar Inscrição</button>
-            </div>
-          </form>
-        </article>
+                <div className={S.formulario_secao}>
+                  <h4>Mensagem Adicional</h4>
+                  <textarea
+                    name="message"
+                    placeholder="Conte-nos porque você quer ser voluntario..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows="5"
+                  ></textarea>
+                </div>
+
+                <div className={S.button_container}>
+                  <p className={S.button_container_text}>
+                    Entraremos em contato para mais informações
+                  </p>
+                  <button type="submit">Enviar Inscrição</button>
+                </div>
+              </form>
+            </article>
+          </>
+        )}
       </section>
     </main>
   );

@@ -14,8 +14,7 @@
 }
 
 /* LOGO */
-.boxLogo {
-  border: 1px solid red; /* só para você visualizar */
+.boxLogo {/* só para você visualizar */
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -35,9 +34,7 @@ a {
 }
 
 /* AREA DA DIREITA (hambúrguer + menu) */
-.rightArea {
-  border: 1px solid red; /* só para você visualizar */
-
+.rightArea { /* só para você visualizar */
   display: flex;
   align-items: center;
   gap: 1rem;

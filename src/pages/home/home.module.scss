@@ -156,21 +156,17 @@ section {
     }
 
     &_cards {
-      // border: 1px solid red;
       flex-direction: column;
       align-items: center;
     }
 
     &_card {
-      // border: 1px solid red;
-
       width: 70vw;
       height: 20vh;
       gap: 1.5rem;
 
       p {
         width: 15rem;
-        // border: 1px solid red;
         font-size: 1rem;
       }
     }

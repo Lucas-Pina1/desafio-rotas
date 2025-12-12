@@ -2,8 +2,13 @@ import S from "./home.module.scss";
 import { Link } from "react-router-dom";
 import Badge from "../../assets/saude-todos.svg";
 import Doctor from "../../assets/img/doctor.png";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <main>
       <section className={S.hero}>
@@ -41,13 +46,15 @@ export default function Home() {
           <article className={S.missao_card}>
             <h3>Comunidade Forte</h3>
             <p>
-              Construir uma rede de profissionais de saúde dedicados a servir com compaixão e profissionalismo.
+              Construir uma rede de profissionais de saúde dedicados a servir
+              com compaixão e profissionalismo.
             </p>
           </article>
           <article className={S.missao_card}>
             <h3>Bem-estar Total</h3>
             <p>
-              Oferecer atendimento integral em medicina geral e odontologia para melhorar a qualidade de vida.
+              Oferecer atendimento integral em medicina geral e odontologia para
+              melhorar a qualidade de vida.
             </p>
           </article>
         </div>
