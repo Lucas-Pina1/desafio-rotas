@@ -1,0 +1,123 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 6rem;
+  border-bottom: 2px solid gray;
+}
+
+/* Linha principal (logo + hambúrguer/menu) */
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+.boxLogo {
+  border: 1px solid red; /* só para você visualizar */
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* TEXTOS DO HEADER */
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* AREA DA DIREITA (hambúrguer + menu) */
+.rightArea {
+  border: 1px solid red; /* só para você visualizar */
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* MENU DESKTOP */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  a {
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+}
+
+/* Botão do menu mobile */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: inline-block;
+  }
+}
+
+/* Botão verde */
+.primaryBtn {
+  background-color: #00745a;
+  color: #fff;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+}
+
+/* MENU ABERTO NO MOBILE */
+.open {
+  display: flex;
+  max-height: 300px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .top {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .rightArea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .boxLogo {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .primaryBtn {
+    font-size: 0.8rem;
+    padding: 1rem 1rem;
+  }
+}

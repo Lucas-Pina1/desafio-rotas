@@ -1,0 +1,142 @@
+footer {
+  background-color: #141414;
+  color: #fff;
+
+  .boxFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4rem 6rem;
+    text-decoration: none;
+    flex-wrap: wrap;
+
+    &_boxMarca {
+      max-width: 350px;
+      // border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      p {
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+    }
+
+    &_logo {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      gap: 0.75rem;
+
+      img {
+        width: 3.5rem;
+        // height: 3rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+    }
+
+    &_contato {
+      background-color: #141414;
+      color: #fff;
+
+      h3 {
+        margin-bottom: 1.5rem;
+      }
+
+      &_lista {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        list-style: none;
+        gap: 1rem;
+
+        &__item {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.copywrite {
+  border-top: 3px solid #0b0b0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 0rem;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  footer {
+    .boxFooter {
+      justify-content: space-between;
+      padding: 1rem 1rem;
+      height: 40vh;
+
+      &_boxMarca {
+        gap: 1.25rem;
+        max-width: 150px;
+
+        p {
+          font-size: 0.75rem;
+        }
+      }
+
+      &_logo {
+        gap: 0.5rem;
+
+        img {
+          width: 2rem;
+          // height: 3rem;
+        }
+
+        a {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+      }
+
+      &_contato {
+        background-color: #141414;
+        color: #fff;
+       
+        h3 {
+          margin-bottom: 1rem;
+          font-size: 1rem;
+        }
+
+        &_lista {
+          gap: 0.5rem;
+          // font-size: 0.75rem;
+
+
+          &__item {
+          font-size: 0.75rem;
+            gap: 0.25rem;
+
+            img {
+              width: 10%;
+            }
+        
+          }
+        }
+      }
+    }
+    .copywrite {
+      padding: 1.5rem 1rem;
+      font-size: 0.75rem;
+      width:100%;
+    }
+  }
+}
