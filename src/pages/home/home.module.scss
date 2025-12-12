@@ -185,3 +185,19 @@ section {
     }
   }
 }
+
+@media (max-width: 365px) {
+  .missao {
+    &_card {
+      width: 80vw;
+      height: 20vh;
+      gap: 1.5rem;
+      padding: 1.25rem;
+
+      p {
+        width: 15rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
