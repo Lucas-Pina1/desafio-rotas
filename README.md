@@ -1,17 +1,73 @@
-# React + Vite
+# 🩺🦷 Médicos & Dentistas Solidários  
+**Portal informativo sobre saúde geral e saúde bucal**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido como desafio prático, com o objetivo de criar uma aplicação moderna, acolhedora e funcional, destacando a importância do cuidado com o corpo e com o sorriso.  
+A interface busca transmitir **confiança, bem-estar e profissionalismo**, utilizando React, SCSS e boas práticas de componentização.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Objetivo do Projeto  
+Construir um portal chamado **Médicos & Dentistas**, oferecendo páginas informativas sobre cuidados médicos e odontológicos.  
+A aplicação deve ser clara, intuitiva e responsiva, permitindo ao usuário navegar entre especialidades e realizar um cadastro voluntário.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧩 Tecnologias Utilizadas  
 
-## Expanding the ESLint configuration
+### ✅ **React.js (com Vite)**
+- Projeto iniciado com Vite  
+- Componentização (Header, Footer, Cards, etc.)  
+- Organização em pastas: `components/`, `pages/`, `styles/`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# desafio-rotas
+### ✅ **React Router DOM**
+Rotas obrigatórias implementadas:
+- `/` — **Página Inicial**
+- `/cadastro` — **Cadastro de Voluntários**
+
+As rotas foram configuradas em arquivo próprio (ex.: `App.jsx` ou `routes.jsx`).
+
+### ✅ **SCSS**
+- Uso de **variáveis** (cores, espaçamentos e fontes)  
+- **Aninhamento**  
+- Estrutura modular (`/styles`, `/components`, `/pages`)  
+- Classes organizadas e consistentes (BEM opcional)
+
+---
+
+## 🎨 Identidade Visual  
+
+### **Cores**
+A escolha da paleta reforça os pilares do projeto:
+- 💙 Saúde  
+- 🦷 Higiene  
+- 💚 Bem-estar  
+
+### **Tipografia**
+- **Inter** (Google Fonts)  
+- Leitura suave, moderna e acessível
+
+---
+
+## 📱 Responsividade  
+A interface foi construída totalmente com **Flexbox**, seguindo as regras do desafio.
+
+Foram utilizadas unidades e técnicas como:
+- `%`, `vh`, `vw`  
+- `rem`  
+- `max-width`  
+- `media queries`
+
+### ❌ Não Utilizado
+- Grid Layout  
+- Position (absolute, relative, sticky...)  
+- Frameworks CSS (Bootstrap, Tailwind...)  
+- Bibliotecas de UI ou plugins externos  
+
+---
+
+## 💬 Mensagem Final  
+Cuidar da saúde — do corpo e do sorriso — é essencial para viver bem.  
+E desenvolver aplicações completas é essencial para evoluir como profissional.
+
+Agora é sua vez: explore, contribua e evolua!  
+🩺🦷💙✨
